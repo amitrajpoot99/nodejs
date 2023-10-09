@@ -6,7 +6,7 @@ fs.readFile('emp.json','utf-8',(err,data)=>{
     console.log(typeof data)
     //data in string format
     let employees=JSON.parse(data)
-    console.log(employees[1])
+    console.log(employees)
 
     for(emp of employees){
         console.log(emp.ename)
