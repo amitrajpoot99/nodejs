@@ -6,7 +6,7 @@ router.get("/",(req,resp)=>{
     resp.send("user root page");
 })
 
-router.post("/add",(req,resp)=>{
+router.post("/user/add",(req,resp)=>{
     resp.send("add user");
 })
 

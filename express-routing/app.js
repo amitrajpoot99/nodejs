@@ -14,10 +14,11 @@ let host=process.env.HOST
 let app=express()
 app.use(morgan('dev'))
 
-app.get("/",(req,resp)=>{
-    resp.sendFile(path.join(process.cwd(),"htmlfiles","index.html"))
-})
+// app.get("/",(req,resp)=>{
+//     resp.sendFile(path.join(process.cwd(),"htmlfiles","index.html"))
+// })
 
+app.use(userRouter)
 
 
 
