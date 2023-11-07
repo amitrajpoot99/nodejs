@@ -14,11 +14,12 @@ router.get("/", (req, resp) => {
 //new user registration
 router.post("/add",async(req,resp)=>{
     try{
+        console.log(req.body)
         
-        let {name,email,password}=req.body;
+        //let {name,email,password}=req.body;
 
         //check if user already registered
-        let user=await User.findOne({email:email})
+       // let user=await User.findOne({email:email})
         console.log(user)
         if(user){
             return resp.status(401).json({'msg':'user already exists'})
