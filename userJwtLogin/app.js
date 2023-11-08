@@ -19,6 +19,9 @@ let mongoUrl=process.env.MONGO_SERVER_URL
 
 app.use(morgan('dev'))
 
+//read form data from postman
+app.use(express.json())
+
 //root request served using file system module
 app.get("/",(req,resp)=>{
     fs.readFile(path.join("htmlFiles","index.html"),"utf-8",(err,data)=>{
